@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         adapter = ActivityMainAdapter(data) {
             showDetail(it)
         }
+        lstView.adapter = adapter
     }
 
     private fun readDataFromFile(id : Int) : MutableList<NumStr> {

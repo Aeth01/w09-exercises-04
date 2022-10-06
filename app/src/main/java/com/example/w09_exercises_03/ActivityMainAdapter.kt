@@ -27,12 +27,12 @@ class ActivityMainAdapter(private val data : MutableList<NumStr>,
     }
 
     inner class Holder(private val v : View) : RecyclerView.ViewHolder(v) {
-        private val num = v.findViewById<TextView>(R.id.tvNum)
-        private val str = v.findViewById<TextView>(R.id.tvStr)
+        private val numTV = v.findViewById<TextView>(R.id.tvNum)
+        private val strTV = v.findViewById<TextView>(R.id.tvStr)
 
         fun bind(item : NumStr) {
-            num.setText(item.num)
-            str.setText(item.str)
+            numTV.setText(item.num.toString())
+            strTV.setText(item.str)
 
             Log.e("INFO", "${item.num} | ${item.str}")
         }
